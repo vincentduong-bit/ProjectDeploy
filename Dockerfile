@@ -31,10 +31,10 @@ COPY . .
 RUN composer install --no-dev --optimize-autoloader
 
 # Install Node dependencies
-RUN npm install
+# RUN npm install
 
 # Build frontend assets
-RUN npm run build
+# RUN npm run build
 
 # Laravel optimization
 RUN php artisan optimize:clear
