@@ -6,11 +6,17 @@ import { Link } from '@inertiajs/react';
 import { LogOut, Settings } from 'lucide-react';
 
 interface UserMenuContentProps {
-    user: User;
+    user?: User | null;
 }
 
 export function UserMenuContent({ user }: UserMenuContentProps) {
     const cleanup = useMobileNavigation();
+
+    if (!user) {
+        return (
+            <div className="p-4 text-sm text-muted-foreground">Sign in to access your profile and settings.</div>
+        );
+    }
 
     return (
         <>
