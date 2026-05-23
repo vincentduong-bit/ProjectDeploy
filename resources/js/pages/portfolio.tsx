@@ -193,7 +193,7 @@ export default function Portfolio() {
                                             <p className="text-base font-medium text-white">+84 123 456 789</p>
                                         </div>
 
-                                        <div className="pt-2 space-y-3">
+                                        <div className="space-y-3 pt-2">
                                             <Button asChild className="w-full">
                                                 <Link href="mailto:hello@vincentduong.dev">Send Email</Link>
                                             </Button>
@@ -307,7 +307,9 @@ export default function Portfolio() {
                     </div>
 
                     <div className="relative mx-auto max-w-[920px] px-4">
-                        <div className="absolute top-0 left-1/2 h-full w-px -translate-x-1/2 bg-slate-700/50" />
+                        {/* Timeline line */}
+                        <div className="absolute top-0 left-4 h-full w-px bg-slate-700/50 md:left-1/2 md:-translate-x-1/2" />
+
                         <div className="space-y-10">
                             {timeline.map((item, index) => {
                                 const isRight = index % 2 === 0;
@@ -315,40 +317,62 @@ export default function Portfolio() {
 
                                 return (
                                     <div key={item.period} className="relative">
+                                        {/* Timeline dot */}
                                         <span
-                                            className={`absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 transform rounded-full border border-white/10 bg-slate-950 p-2 shadow-xl shadow-cyan-500/10 transition-all duration-500 ease-out ${isExpanded ? 'scale-110 shadow-cyan-500/30' : 'scale-100'}`}
+                                            className={`absolute top-8 z-10 -translate-x-1/2 rounded-full border border-white/10 bg-slate-950 p-2 shadow-xl shadow-cyan-500/10 transition-all duration-500 ease-out md:top-1/2 md:left-1/2 md:-translate-y-1/2 ${
+                                                isExpanded ? 'scale-110 shadow-cyan-500/30' : 'scale-100'
+                                            }`}
                                         >
                                             <span className="block h-3.5 w-3.5 rounded-full bg-cyan-400 shadow-lg shadow-cyan-400/30 transition-all duration-500" />
                                         </span>
+
+                                        {/* Timeline content */}
                                         <div
-                                            className={`flex w-full ${isRight ? 'justify-end' : 'justify-start'}`}
+                                            className={`flex w-full ${isRight ? 'md:justify-end' : 'md:justify-start'}`}
                                             data-reveal
                                             data-reveal-delay={`${80 + index * 40}ms`}
                                         >
-                                            <div className={`w-full max-w-[480px] ${isRight ? 'pl-12 text-left' : 'pr-12 text-right'}`}>
+                                            <div
+                                                className={`ml-12 w-full max-w-full text-left md:ml-0 md:max-w-[480px] ${
+                                                    isRight ? 'md:pl-12 md:text-left' : 'md:pr-12 md:text-right'
+                                                } `}
+                                            >
                                                 <button
                                                     type="button"
-                                                    className={`group relative w-full overflow-hidden rounded-[1.75rem] border border-white/10 bg-slate-950/90 p-6 text-left shadow-xl transition-all duration-500 ease-out hover:border-cyan-400/30 hover:bg-slate-900 ${isExpanded ? 'border-cyan-400/30 shadow-cyan-500/20' : 'shadow-black/10'}`}
+                                                    className={`group relative w-full overflow-hidden rounded-[1.75rem] border border-white/10 bg-slate-950/90 p-6 text-left shadow-xl transition-all duration-500 ease-out hover:border-cyan-400/30 hover:bg-slate-900 ${
+                                                        isExpanded ? 'border-cyan-400/30 shadow-cyan-500/20' : 'shadow-black/10'
+                                                    }`}
                                                     onClick={() => setExpandedTimelineIndex(isExpanded ? null : index)}
                                                     aria-expanded={isExpanded}
                                                 >
+                                                    {/* Arrow desktop only */}
                                                     <span
-                                                        className={`pointer-events-none absolute top-1/2 h-5 w-5 -translate-y-1/2 rounded-sm border border-white/10 bg-slate-950/90 shadow-lg shadow-cyan-500/10 ${isRight ? '-left-3 rotate-45' : '-right-3 rotate-45'}`}
+                                                        className={`pointer-events-none absolute top-1/2 hidden h-5 w-5 -translate-y-1/2 rounded-sm border border-white/10 bg-slate-950/90 shadow-lg shadow-cyan-500/10 md:block ${
+                                                            isRight ? '-left-3 rotate-45' : '-right-3 rotate-45'
+                                                        }`}
                                                     />
+
                                                     <div className="space-y-4">
-                                                        <div className={`${isRight ? 'text-left' : 'text-right'}`}>
+                                                        {/* Content */}
+                                                        <div className={`text-left ${isRight ? 'md:text-left' : 'md:text-right'}`}>
                                                             <span className="rounded-full bg-cyan-500/10 px-3 py-1 text-xs tracking-[0.24em] text-cyan-300 uppercase">
                                                                 {item.period}
                                                             </span>
+
                                                             <h3 className="mt-3 text-xl font-semibold text-white">{item.title}</h3>
+
                                                             <p className="text-sm text-slate-400">{item.position}</p>
                                                         </div>
-                                                        <div className={`flex justify-${isRight ? 'start' : 'end'}`}>
+
+                                                        {/* Action */}
+                                                        <div className={`flex justify-start ${isRight ? 'md:justify-start' : 'md:justify-end'}`}>
                                                             <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs tracking-[0.24em] text-slate-300 uppercase transition group-hover:border-cyan-400/30 group-hover:bg-cyan-500/10">
                                                                 {isExpanded ? 'Collapse' : 'View Details'}
                                                             </span>
                                                         </div>
                                                     </div>
+
+                                                    {/* Expand content */}
                                                     {isExpanded && (
                                                         <p className="mt-5 text-slate-300 opacity-100 transition-all duration-500 ease-out">
                                                             {item.description}
