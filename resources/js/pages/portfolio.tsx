@@ -6,56 +6,56 @@ import { useEffect, useState } from 'react';
 import useScrollReveal from '@/hooks/useScrollReveal';
 import logoUrl from '../../images/Logo.png';
 
-const services = [
+const contributions = [
     {
-        title: 'Thiết kế web cao cấp',
-        description: 'Trang web responsive, UI/UX chuyên nghiệp và tối ưu hiệu suất.',
+        title: 'Full-Stack Development',
+        description: 'Build responsive web applications from React frontend to PHP/Laravel backend with clean architecture and security best practices.',
     },
     {
-        title: 'Xây dựng API & SaaS',
-        description: 'Kiến trúc backend mạnh mẽ, bảo mật và mở rộng dễ dàng.',
+        title: 'API Design & Optimization',
+        description: 'Design efficient RESTful APIs, optimize performance, and provide comprehensive documentation for team collaboration.',
     },
     {
-        title: 'Tư vấn kỹ thuật',
-        description: 'Hỗ trợ giải pháp kiến trúc, workflow DevOps và cải thiện hiệu suất.',
+        title: 'Product Engineering',
+        description: 'Develop features from requirement analysis to deployment with user-centric thinking and quality assurance.',
     },
 ];
 
 const projects = [
     {
-        title: 'Hệ thống đặt lịch nội bộ',
-        description: 'Tự động hóa lịch hẹn và nhắc nhở cho doanh nghiệp.',
+        title: 'Booking Management System',
+        description: 'Automated appointment scheduling and reminder system for enterprise-level client management.',
     },
     {
-        title: 'Nền tảng quản lý sản phẩm',
-        description: 'Dashboard trực quan cho quy trình bán hàng và inventory.',
+        title: 'Product Dashboard Platform',
+        description: 'Real-time analytics dashboard for sales pipeline tracking and inventory management with role-based access.',
     },
     {
-        title: 'Landing page thương hiệu',
-        description: 'Thiết kế thương hiệu cao cấp giúp tăng chuyển đổi khách hàng.',
+        title: 'Brand Landing Page',
+        description: 'Premium brand-focused landing page design with conversion optimization and responsive layouts.',
     },
 ];
 
 const timeline = [
     {
         period: '2020 - 2025',
-        title: 'Sinh viên Đại Học Công Nghệ Thông Tin và Truyền Thông Việt - Hàn',
-        description: 'Học tập chuyên ngành CNTT, tham gia dự án thực tế và rèn luyện kỹ năng lập trình.',
+        title: 'Student at Vietnam-Korea University of Information and Communication Technology',
+        description: 'Specialized in IT and computer science, participated in real-world projects and developed core programming skills.',
     },
     {
         period: '2021',
-        title: 'Thực tập tại Bizverse',
-        description: 'Tham gia phát triển web, học quy trình làm việc thực tế và tự động hóa quy trình nội bộ.',
+        title: 'Intern at Bizverse',
+        description: 'Contributed to web development projects, learned real-world workflows and process automation techniques.',
     },
     {
         period: '2023',
-        title: 'Thực tập tại BAP Software',
-        description: 'Hỗ trợ xây dựng product features và cải thiện chất lượng code trong môi trường agile.',
+        title: 'Intern at BAP Software',
+        description: 'Assisted in building product features and improving code quality within an agile development environment.',
     },
     {
         period: '2024 - 2026',
-        title: 'PHP Developer tại EFE Technology',
-        description: 'Phát triển backend PHP, tối ưu API, xây dựng hệ thống mở rộng và phối hợp với đội ngũ frontend.',
+        title: 'PHP Developer at EFE Technology',
+        description: 'Develop PHP backend systems, optimize API performance, build scalable architectures and collaborate with frontend teams.',
     },
 ];
 
@@ -93,13 +93,13 @@ export default function Portfolio() {
                 <section className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
                     <div className="space-y-8" data-reveal data-reveal-delay="0ms">
                         <div className="space-y-4">
-                            <span className="inline-flex items-center rounded-full bg-cyan-500/10 px-4 py-2 text-sm font-medium text-cyan-300 ring-1 ring-cyan-500/20">
-                                Chuyên gia giải pháp phần mềm</span>
-                            <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">{
-                                'Tôi là Vincent Duong — xây dựng trải nghiệm web cao cấp và giải pháp kỹ thuật số cho doanh nghiệp.'
-                            }</h1>
-                            <p className="max-w-2xl text-base leading-8 text-slate-300 sm:text-lg" data-reveal data-reveal-delay="80ms">
-                                Tôi giúp hiện thực hoá ý tưởng, phát triển sản phẩm với hiệu suất mạnh mẽ, thiết kế tinh tế và quy trình làm việc chuyên nghiệp.
+                            <span className="inline-flex items-center rounded-full bg-cyan-500/10 px-4 py-2 text-xs font-semibold text-cyan-300 ring-1 ring-cyan-500/20 uppercase tracking-wider">
+                                Full-Stack Developer</span>
+                            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl leading-tight">
+                                Building Products, Optimizing Systems, Solving Complex Problems
+                            </h1>
+                            <p className="max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg sm:leading-8" data-reveal data-reveal-delay="80ms">
+                                With 2+ years of experience, I contribute to real-world projects from startups to large enterprises. Specialized in PHP/Laravel backend, React frontend, API optimization, and building scalable system architectures.
                             </p>
                         </div>
 
@@ -111,37 +111,37 @@ export default function Portfolio() {
                             ))}
                         </div>
 
-                        <div className="flex flex-col gap-3 sm:flex-row" data-reveal data-reveal-delay="220ms">
+                        <div className="flex flex-col gap-4 sm:flex-row" data-reveal data-reveal-delay="220ms">
                             <Button asChild>
-                                <Link href="#services">Dịch vụ</Link>
+                                <Link href="#projects">View Projects</Link>
                             </Button>
                             <Button variant="secondary" asChild>
-                                <Link href="#contact">Liên hệ</Link>
+                                <Link href="#contact">Get In Touch</Link>
                             </Button>
                         </div>
                     </div>
 
-                    <div className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-8 shadow-2xl shadow-black/40" data-reveal data-reveal-delay="80ms">
-                        <div className="space-y-6">
+                    <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-slate-900/80 to-slate-950/80 p-10 shadow-2xl shadow-black/40" data-reveal data-reveal-delay="80ms">
+                        <div className="space-y-8">
                             <div className="flex items-center gap-4 rounded-[1.75rem] bg-gradient-to-br from-cyan-500/10 via-slate-900 to-slate-950/80 p-6">
                                 <img src={logoUrl} alt="Logo" className="h-14 w-14 rounded-2xl object-contain bg-white/5 p-2" />
                                 <div>
-                                    <p className="text-sm uppercase tracking-[0.32em] text-cyan-300/80">Điểm nhấn</p>
-                                    <h2 className="mt-4 text-2xl font-semibold text-white">Các giá trị tôi mang lại</h2>
+                                    <p className="text-xs font-semibold uppercase tracking-widest text-cyan-300/80">By The Numbers</p>
+                                    <h2 className="mt-3 text-2xl font-bold text-white">Experience & Skills</h2>
                                 </div>
                             </div>
-                            <p className="mt-3 text-slate-300">Giải pháp thiết kế để giúp bạn tăng trưởng, tối ưu hoá quy trình và xây dựng sản phẩm có sức cạnh tranh.</p>
-                            <p className="text-sm text-slate-400">Logo hiển thị ngay lập tức để củng cố thương hiệu và tạo cảm giác chuyên nghiệp cho trang portfolio.</p>
-                            <div className="grid gap-4 sm:grid-cols-2">
+                            <p className="mt-3 text-slate-300 leading-relaxed">Real-world work, hands-on learning, and achievements that have contributed to my growth as a software developer.</p>
+                            <p className="text-sm text-slate-400 leading-relaxed">Every step has shaped my professional journey: from startups to enterprises, from small features to scalable systems.</p>
+                            <div className="grid gap-6 sm:grid-cols-2">
                                 {[
-                                    { label: 'Kinh nghiệm', value: '2+ năm' },
-                                    { label: 'Dự án', value: '10+' },
-                                    { label: 'Khách hàng', value: '10+' },
-                                    { label: 'Ngôn ngữ', value: 'TypeScript, PHP, Java' },
+                                    { label: 'Experience', value: '2+ Years' },
+                                    { label: 'Projects', value: '10+' },
+                                    { label: 'Languages', value: 'PHP, React, TS' },
+                                    { label: 'GPA', value: '3.64/4.0' },
                                 ].map((item, i) => (
-                                    <div key={item.label} className="rounded-3xl border border-white/10 bg-slate-950/90 p-5" data-reveal data-reveal-delay={`${i * 40}ms`}>
-                                        <p className="text-sm text-slate-400">{item.label}</p>
-                                        <p className="mt-3 text-2xl font-semibold text-white">{item.value}</p>
+                                    <div key={item.label} className="rounded-xl border border-white/10 bg-slate-950/80 p-6 hover:border-cyan-400/30 transition-colors" data-reveal data-reveal-delay={`${i * 40}ms`}>
+                                        <p className="text-xs font-semibold uppercase tracking-widest text-slate-400">{item.label}</p>
+                                        <p className="mt-4 text-2xl font-bold text-white">{item.value}</p>
                                     </div>
                                 ))}
                             </div>
@@ -150,30 +150,30 @@ export default function Portfolio() {
                 </section>
 
                 <section id="services" className="space-y-6">
-                    <div className="space-y-3">
-                        <p className="text-sm uppercase tracking-[0.32em] text-slate-400" data-reveal data-reveal-delay="20ms">Dịch vụ</p>
-                        <h2 className="text-3xl font-semibold text-white" data-reveal data-reveal-delay="40ms">Thiết kế và triển khai giải pháp toàn diện</h2>
-                        <p className="max-w-3xl text-slate-300" data-reveal data-reveal-delay="80ms">Tôi hỗ trợ phát triển sản phẩm từ ý tưởng, xây dựng quy trình kỹ thuật và triển khai hệ thống thực tế.</p>
+                    <div className="space-y-4">
+                        <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400" data-reveal data-reveal-delay="20ms">Skills & Contributions</p>
+                        <h2 className="text-4xl font-bold text-white" data-reveal data-reveal-delay="40ms">Core Technical Expertise</h2>
+                        <p className="max-w-3xl text-base leading-relaxed text-slate-300" data-reveal data-reveal-delay="80ms">Key areas where I contribute and accumulate experience through real-world projects in professional environments.</p>
                     </div>
 
                     <div className="grid gap-6 lg:grid-cols-3">
-                        {services.map((service, i) => (
-                            <div key={service.title} className="rounded-[1.75rem] border border-white/10 bg-slate-900/80 p-6 shadow-xl shadow-black/20" data-reveal data-reveal-delay={`${i * 60}ms`}>
-                                <div className="flex items-center gap-3 text-cyan-300">
-                                    <Sparkles className="h-5 w-5" />
-                                    <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                        {contributions.map((item, i) => (
+                            <div key={item.title} className="rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900/80 to-slate-950/80 p-8 shadow-xl shadow-black/20 hover:border-cyan-400/30 transition-all duration-300" data-reveal data-reveal-delay={`${i * 60}ms`}>
+                                <div className="flex items-center gap-4 text-cyan-400 mb-4">
+                                    <Briefcase className="h-6 w-6 flex-shrink-0" />
+                                    <h3 className="text-xl font-bold text-white">{item.title}</h3>
                                 </div>
-                                <p className="mt-4 text-slate-300">{service.description}</p>
+                                <p className="text-slate-300 leading-relaxed">{item.description}</p>
                             </div>
                         ))}
                     </div>
                 </section>
 
-                <section id="timeline" className="space-y-8 rounded-[2rem] border border-white/10 bg-slate-900/80 p-8 shadow-xl shadow-black/20" data-reveal data-reveal-delay="20ms">
-                    <div className="space-y-3">
-                        <p className="text-sm uppercase tracking-[0.32em] text-slate-400">Timeline nghề nghiệp</p>
-                        <h2 className="text-3xl font-semibold text-white">Hành trình học tập và kinh nghiệm</h2>
-                        <p className="max-w-3xl text-slate-300">Các mốc quan trọng thể hiện hành trình từ học đại học đến công việc lập trình chuyên nghiệp.</p>
+                <section id="timeline" className="space-y-8 rounded-[2rem] border border-white/10 bg-slate-900/80 p-10 shadow-xl shadow-black/20" data-reveal data-reveal-delay="20ms">
+                    <div className="space-y-4">
+                        <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400">Career Journey</p>
+                        <h2 className="text-4xl font-bold text-white">Experience & Growth</h2>
+                        <p className="max-w-3xl text-base leading-relaxed text-slate-300">From university education to professional development roles at leading companies, each stage has contributed to building my skills and experience.</p>
                     </div>
 
                     <div className="relative mx-auto max-w-[920px] px-4">
@@ -185,17 +185,18 @@ export default function Portfolio() {
 
                                 return (
                                     <div key={item.period} className="relative">
-                                        <span className="absolute left-1/2 top-8 z-10 -translate-x-1/2 rounded-full border border-white/10 bg-slate-950 p-2 shadow-xl shadow-cyan-500/10">
-                                            <span className="block h-3.5 w-3.5 rounded-full bg-cyan-400 shadow-lg shadow-cyan-400/30" />
+                                        <span className={`absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10 bg-slate-950 p-2 shadow-xl shadow-cyan-500/10 transform transition-all duration-500 ease-out ${isExpanded ? 'scale-110 shadow-cyan-500/30' : 'scale-100'}`}>
+                                            <span className="block h-3.5 w-3.5 rounded-full bg-cyan-400 shadow-lg shadow-cyan-400/30 transition-all duration-500" />
                                         </span>
                                         <div className={`flex w-full ${isRight ? 'justify-end' : 'justify-start'}`} data-reveal data-reveal-delay={`${80 + index * 40}ms`}>
                                             <div className={`w-full max-w-[480px] ${isRight ? 'pl-12 text-left' : 'pr-12 text-right'}`}>
                                                 <button
                                                     type="button"
-                                                    className="group w-full rounded-[1.75rem] border border-white/10 bg-slate-950/90 p-6 text-left shadow-xl shadow-black/10 transition hover:border-cyan-400/30 hover:bg-slate-900"
+                                                    className={`group relative overflow-hidden w-full rounded-[1.75rem] border border-white/10 bg-slate-950/90 p-6 text-left shadow-xl transition-all duration-500 ease-out hover:border-cyan-400/30 hover:bg-slate-900 ${isExpanded ? 'border-cyan-400/30 shadow-cyan-500/20' : 'shadow-black/10'}`}
                                                     onClick={() => setExpandedTimelineIndex(isExpanded ? null : index)}
                                                     aria-expanded={isExpanded}
                                                 >
+                                                    <span className={`pointer-events-none absolute top-1/2 h-5 w-5 -translate-y-1/2 rounded-sm bg-slate-950/90 border border-white/10 shadow-lg shadow-cyan-500/10 ${isRight ? '-left-3 rotate-45' : '-right-3 rotate-45'}`} />
                                                     <div className="space-y-4">
                                                         <div className={`${isRight ? 'text-left' : 'text-right'}`}>
                                                             <span className="rounded-full bg-cyan-500/10 px-3 py-1 text-xs uppercase tracking-[0.24em] text-cyan-300">{item.period}</span>
@@ -208,7 +209,7 @@ export default function Portfolio() {
                                                         </div>
                                                     </div>
                                                     {isExpanded && (
-                                                        <p className="mt-5 text-slate-300">{item.description}</p>
+                                                        <p className="mt-5 text-slate-300 transition-all duration-500 ease-out opacity-100">{item.description}</p>
                                                     )}
                                                 </button>
                                             </div>
@@ -220,58 +221,61 @@ export default function Portfolio() {
                     </div>
                 </section>
 
-                <section className="space-y-6" id="projects">
-                    <div className="space-y-3">
-                        <p className="text-sm uppercase tracking-[0.32em] text-slate-400" data-reveal data-reveal-delay="20ms">Dự án</p>
-                        <h2 className="text-3xl font-semibold text-white" data-reveal data-reveal-delay="40ms">Một vài dự án tiêu biểu</h2>
+                <section className="space-y-8" id="projects">
+                    <div className="space-y-4">
+                        <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400" data-reveal data-reveal-delay="20ms">Projects</p>
+                        <h2 className="text-4xl font-bold text-white" data-reveal data-reveal-delay="40ms">Featured Work</h2>
+                        <p className="max-w-3xl text-base leading-relaxed text-slate-300" data-reveal data-reveal-delay="60ms">Representative projects I've contributed to, from concept to deployment with real-world users and production environments.</p>
                     </div>
 
                     <div className="grid gap-6 lg:grid-cols-3">
                         {projects.map((project, i) => (
-                            <article key={project.title} className="rounded-[1.75rem] border border-white/10 bg-slate-900/80 p-6 shadow-xl shadow-black/15" data-reveal data-reveal-delay={`${i * 60}ms`}>
-                                <div className="flex items-center gap-3 text-cyan-300">
-                                    <Briefcase className="h-5 w-5" />
-                                    <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+                            <article key={project.title} className="rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900/80 to-slate-950/80 p-8 shadow-xl shadow-black/15 hover:border-cyan-400/30 transition-all duration-300" data-reveal data-reveal-delay={`${i * 60}ms`}>
+                                <div className="flex items-center gap-4 text-cyan-400 mb-4">
+                                    <Globe className="h-6 w-6 flex-shrink-0" />
+                                    <h3 className="text-xl font-bold text-white">{project.title}</h3>
                                 </div>
-                                <p className="mt-4 text-slate-300">{project.description}</p>
+                                <p className="text-slate-300 leading-relaxed">{project.description}</p>
                             </article>
                         ))}
                     </div>
                 </section>
 
-                <section id="contact" className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-8 shadow-2xl shadow-black/30" data-reveal data-reveal-delay="20ms">
-                    <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-                        <div className="space-y-4">
-                            <p className="text-sm uppercase tracking-[0.32em] text-slate-400">Liên hệ</p>
-                            <h2 className="text-3xl font-semibold text-white">Sẵn sàng hợp tác với bạn</h2>
-                            <p className="max-w-2xl text-slate-300">
-                                Nếu bạn cần một trang web chuyên nghiệp, hệ thống backend mạnh mẽ hoặc tư vấn kỹ thuật, tôi sẵn sàng đồng hành cùng dự án của bạn.
-                            </p>
+                <section id="contact" className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-slate-900/80 to-slate-950/80 p-10 shadow-2xl shadow-black/30" data-reveal data-reveal-delay="20ms">
+                    <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+                        <div className="space-y-6">
+                            <div className="space-y-4">
+                                <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400">Contact</p>
+                                <h2 className="text-4xl font-bold text-white">Let's Collaborate & Build Together</h2>
+                                <p className="max-w-2xl text-base leading-relaxed text-slate-300">
+                                    I'm always open to discussing new opportunities, exciting projects, or anything related to engineering and product development. Reach out via email or let's start a conversation about your next big idea.
+                                </p>
+                            </div>
                         </div>
 
-                        <div className="space-y-4 rounded-[1.75rem] border border-white/10 bg-slate-950/80 p-6" data-reveal data-reveal-delay="120ms">
-                            <div className="space-y-2">
-                                <p className="text-sm text-slate-400">Email</p>
-                                <p className="text-lg font-semibold text-white">hello@vincentduong.dev</p>
+                        <div className="space-y-6 rounded-[1.75rem] border border-white/10 bg-slate-950/80 p-8" data-reveal data-reveal-delay="120ms">
+                            <div className="space-y-3">
+                                <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest">Email</p>
+                                <p className="text-lg font-semibold text-white break-all">hello@vincentduong.dev</p>
                             </div>
-                            <div className="space-y-2">
-                                <p className="text-sm text-slate-400">Điện thoại</p>
+                            <div className="space-y-3">
+                                <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest">Phone</p>
                                 <p className="text-lg font-semibold text-white">+84 123 456 789</p>
                             </div>
-                            <div className="mt-4 flex flex-wrap gap-3">
+                            <div className="mt-6 flex flex-col gap-3">
                                 <Button asChild>
-                                    <Link href="mailto:hello@vincentduong.dev">Gửi mail</Link>
+                                    <Link href="mailto:hello@vincentduong.dev">Send Email</Link>
                                 </Button>
                                 <Button variant="secondary" asChild>
-                                    <Link href="#services">Xem dịch vụ</Link>
+                                    <Link href="#projects">View Projects</Link>
                                 </Button>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <footer className="border-t border-white/10 pt-6 text-sm text-slate-500" data-reveal data-reveal-delay="40ms">
-                    <p>© 2026 Vincent Duong. Portfolio cá nhân và dịch vụ kỹ thuật số.</p>
+                <footer className="border-t border-white/10 pt-8 text-center text-sm text-slate-500" data-reveal data-reveal-delay="40ms">
+                    <p>© 2026 Vincent Duong. Software Development & Product Engineering.</p>
                 </footer>
             </div>
         </main>
